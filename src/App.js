@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { memo, Suspense } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
-function App() {
+import GetRoutes from './router';
+
+import AppSiderNav from './components/app-sidernav';
+import AppHeader from './components/app-header';
+import AppPlayBar from './components/app-play-bar';
+
+import {
+  AppWrapper
+} from './appStyle';
+
+const App = memo(() => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <BrowserRouter>
+      <AppWrapper>
+        <div className='app_window'>
+          <div className='app_left'>
+            <AppSiderNav />
+          </div>
+          <div className='app_right'>
+            <div className='app_top'>
+              <AppHeader />
+            </div>
+            <div className='w1100'>
+              主界面
+              <Suspense fallback={<div>page loading</div>}>
+                <GetRoutes />
+              </Suspense>
+            </div>
+            <AppPlayBar/>
+          </div>
+        </div>
+      </AppWrapper>
+    </BrowserRouter>
+  )
+})
 
 export default App;

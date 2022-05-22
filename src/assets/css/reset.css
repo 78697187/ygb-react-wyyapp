@@ -1,0 +1,114 @@
+@import "~normalize.css";
+@import "~antd/dist/antd.css";
+
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 3397034 */
+  src: url('//at.alicdn.com/t/font_3397034_1blfo78ntyd.woff2?t=1653230417233') format('woff2'),
+    url('//at.alicdn.com/t/font_3397034_1blfo78ntyd.woff?t=1653230417233') format('woff'),
+    url('//at.alicdn.com/t/font_3397034_1blfo78ntyd.ttf?t=1653230417233') format('truetype');
+}
+
+/* 样式的重置 */
+body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, ins {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #666;
+}
+
+a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+i, em {
+  font-style: normal;
+}
+
+input, textarea, button, select, a {
+  outline: none;
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+/* 全局样式 */
+body, textarea, select, input, button {
+  font-size: 12px;
+  color: #333;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  /* background-color: #f5f5f5; */
+}
+
+.text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+/* 主要是a标签设置内容后隐藏内容 做SEO优化 */
+.text-indent {
+  text-indent: -9999px;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.w1100 {
+  width: 1180px;
+  padding: 0 40px;
+  margin: 0 auto;
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+.main_center {
+  display: flex;
+  justify-content: center;
+}
+
+.iconfont {
+  font-family: 'iconfont' !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.sprite_01 {
+  background: url(../img/logo.png) no-repeat 0 9999px;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background-color: #f5f5f5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0);
+  border-radius: 4px;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 0 6px #d4d4d4;
+  background-color: #e1e1e1;
+}
