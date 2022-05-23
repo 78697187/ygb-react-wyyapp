@@ -3,11 +3,7 @@ import { LIGHT_MODE } from '../../common/constants';
 const {
   themeColor,
   bodyColor,
-  searchBarColor,
-  sideColor,
   normalColor,
-  grayFontColor,
-  boxShadow,
 } = LIGHT_MODE;
 
 export const PlayerBarWrapper = styled.div`
@@ -62,7 +58,7 @@ export const ControlWrapper = styled.div`
     font-size: 20px;
     padding: 0 10px;
     margin-left: 5px;
-    color: ${normalColor};
+    /* color: ${normalColor}; */
   }
   .prev, .next {
     font-size: 23px;

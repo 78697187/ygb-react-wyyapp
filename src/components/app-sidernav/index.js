@@ -18,12 +18,12 @@ const AppSiderNav = memo(() => {
           <span className='list_title text-indent'>在线音乐</span>
           {
             siderList &&
-            siderList.map((item, index) => {
+            siderList.map((item) => {
               return (
-                <a className='list_item' key={item.title} to={item.link}>
+                <NavLink className='list_item' key={item.title} to={item.link}>
                   {item.icon}
                   <em>{item.title}</em>
-                </a>
+                </NavLink>
               )
             })
           }
@@ -32,7 +32,7 @@ const AppSiderNav = memo(() => {
           <span className='list_title'>我的音乐</span>
           {
             siderSongList &&
-            siderSongList.map((item, index) => {
+            siderSongList.map((item) => {
               return (
                 <NavLink className="list_item" key={item.title} to={item.link}>
                   {item.icon}

@@ -12,11 +12,12 @@ export const siderList = [
   {
     title: '视频',
     icon: <span className="iconfont">&#xe601;</span>,
-    link: './mv',
+    link: '/mv',
   },
   {
     title: '电台',
-    icon: <span className="iconfont">&#xe693;</span>
+    icon: <span className="iconfont">&#xe693;</span>,
+    link: '/radio',
   },
 ];
 
@@ -24,7 +25,7 @@ export const siderSongList = [
   {
     title: '我喜欢',
     icon: <span className="iconfont">&#xe6d4;</span>,
-    link: './like',
+    link: '/like',
   },
   {
     title: '本地音乐',

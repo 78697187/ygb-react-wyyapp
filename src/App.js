@@ -24,7 +24,6 @@ const App = memo(() => {
               <AppHeader />
             </div>
             <div className='w1100'>
-              主界面
               <Suspense fallback={<div>page loading</div>}>
                 <GetRoutes />
               </Suspense>

@@ -17,7 +17,7 @@ export const AppWrapper = styled.div`
     flex: 1;
     margin-left: 210px;
     margin-top: 75px;
-    background-color: pink;
+    /* background-color: pink; */
   }
   .app_top {
     position: fixed;
