@@ -1,4 +1,10 @@
 import styled from 'styled-components';
+import { LIGHT_MODE } from './common/constants';
+
+const {
+  bodyColor,
+} = LIGHT_MODE;
+
 
 export const AppWrapper = styled.div`
   .app_window {
@@ -10,6 +16,7 @@ export const AppWrapper = styled.div`
     width: 210px;
     height: 100%;
     overflow-x: auto;
+    background-color: ${bodyColor};
     /* background-color: #ec414141; */
     /* opacity: .3; */
   }

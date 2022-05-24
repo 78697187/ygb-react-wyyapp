@@ -7,7 +7,7 @@ import {
 export const changeTopBannerAction = (res) => ({
   type: actionTypes.CHANGE_TOP_BANNER,
   topBanners: res.banners,
-})
+});
 
 
 // 获取轮播图数据

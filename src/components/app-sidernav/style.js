@@ -7,9 +7,10 @@ const {
   hoverColor,
   sideFontColor,
   grayFontColor,
-}  = LIGHT_MODE;
+} = LIGHT_MODE;
 
 export const AppSider = styled.div`
+
   .logo {
     /* a元素是行内元素没有宽高， 要转成块元素 */
     display: block;
