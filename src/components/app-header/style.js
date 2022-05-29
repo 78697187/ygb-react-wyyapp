@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { LIGHT_MODE } from '../../common/constants';
+import { myTheme } from '../../common/constants';
 const {
   themeColor,
   bodyColor,
   searchBarColor,
   normalColor,
   grayFontColor,
-} = LIGHT_MODE;
+} = myTheme;
 
 export const HeaderWrapper = styled.div`
   display: flex;

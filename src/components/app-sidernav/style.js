@@ -1,25 +1,27 @@
 import styled from "styled-components";
 
-import { LIGHT_MODE } from '@/common/constants';
+import { myTheme } from '@/common/constants';
 
 const {
   themeColor,
   hoverColor,
+  logoUrl,
   sideFontColor,
   grayFontColor,
-} = LIGHT_MODE;
+} = myTheme;
 
 export const AppSider = styled.div`
-
   .logo {
     /* a元素是行内元素没有宽高， 要转成块元素 */
     display: block;
     width: 175px;
     height: 36px;
-    background-position: -12px -79px;
     margin: 30px auto 10px;
     padding-top: 30px;
     padding-bottom: 30px;
+
+    background: url(${logoUrl}) no-repeat;
+    background-position: -12px -79px;
   }
 `
 

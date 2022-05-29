@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import { LIGHT_MODE } from './common/constants';
+import { myTheme } from './common/constants';
 
 const {
   bodyColor,
-} = LIGHT_MODE;
+} = myTheme;
 
 
 export const AppWrapper = styled.div`

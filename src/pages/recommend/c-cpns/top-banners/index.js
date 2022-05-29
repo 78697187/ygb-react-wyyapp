@@ -27,10 +27,10 @@ const TopBanner = memo(() => {
 
   return (
     <BannerWrapper>
-      <div className='banner w1100'>
+      <div className='w1100'>
         <Carousel interval="4000" type="card" height="204px">
         {
-            topBanners.map((item, index) => {
+            topBanners.map((item) => {
               return (
                 <Carousel.Item key={item.imageUrl}>
                   <img src={item.imageUrl} alt={item.typeTitle} className="img"></img>

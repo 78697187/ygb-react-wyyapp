@@ -8,12 +8,6 @@ export const BannerWrapper = styled.div`
     border-radius: 10px;
   }
 
-  .content {
-    display: flex !important;
-    justify-content: space-between;
-
-  }
-
   .el-carousel__button {
     width: 10px;
     height: 10px;

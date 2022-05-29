@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { LIGHT_MODE } from '../../common/constants';
+import { myTheme } from '../../common/constants';
 const {
   themeColor,
   bodyColor,
   normalColor,
-} = LIGHT_MODE;
+} = myTheme;
 
 export const PlayerBarWrapper = styled.div`
   position: fixed;

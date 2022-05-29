@@ -8,6 +8,10 @@ import 'element-theme-default';
 import App from './App';
 
 
+if (localStorage.getItem('Dark') === null){
+  localStorage.setItem('Dark', false);
+}
+
 ReactDOM.render(
   <App/>,
   document.getElementById('root')

@@ -11,7 +11,7 @@ import { siderList, siderSongList } from '@/common/local-data';
 const AppSiderNav = memo(() => {
   return (
     <AppSider>
-        <NavLink className="logo text-indent sprite_01" to="/recommend">
+        <NavLink className="logo text-indent" to="/recommend">
           网页云音乐
         </NavLink>
         <NavList>

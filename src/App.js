@@ -1,6 +1,7 @@
-import React, { memo, Suspense } from 'react';
+import React, { memo, Suspense, useState } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 import GetRoutes from './router';
 import store from './store/index';
@@ -14,27 +15,33 @@ import {
 } from './appStyle';
 
 const App = memo(() => {
+  const [theme, setTheme] = useState(
+    localStorage.getItem('Dark') === 'false' ? false : true
+  );
+
   return (
     <Provider store={store}>
       <BrowserRouter>
-        <AppWrapper>
-          <div className='app_window'>
-            <div className='app_left'>
-              <AppSiderNav />
-            </div>
-            <div className='app_right'>
-              <div className='app_top'>
-                <AppHeader />
+        <ThemeProvider theme={theme ? { mode: 'dark'} : { mode: 'light'}}>
+          <AppWrapper>
+            <div className='app_window'>
+              <div className='app_left'>
+                <AppSiderNav />
               </div>
-              <div className='w1100'>
-                <Suspense fallback={<div>page loading</div>}>
-                  <GetRoutes />
-                </Suspense>
+              <div className='app_right'>
+                <div className='app_top'>
+                  <AppHeader theme={[theme, setTheme]}/>
+                </div>
+                <div className='w1100'>
+                  <Suspense fallback={<div>page loading</div>}>
+                    <GetRoutes />
+                  </Suspense>
+                </div>
+                <AppPlayBar />
               </div>
-              <AppPlayBar />
             </div>
-          </div>
-        </AppWrapper>
+          </AppWrapper>
+        </ThemeProvider>
       </BrowserRouter>
     </Provider>
   )

@@ -9,7 +9,12 @@ import {
   HeaderRight
 } from './style';
 
-const AppHeader = memo(() => {
+const AppHeader = memo((props) => {
+  const [theme, setTheme] = props.theme;
+
+  const changeTheme = () => {
+    setTheme(theme => !theme);
+  };
   return (
     <HeaderWrapper>
       <HeaderLeft>
@@ -34,7 +39,9 @@ const AppHeader = memo(() => {
         <span className="login-button">
           点击登录
         </span>
-        <span className='iconfont toolbar'>&#xe647;</span>
+        <span className='iconfont toolbar'
+              onClick={changeTheme}
+        >&#xe647;</span>
         <span className='iconfont toolbar'>&#xe63f;</span>
       </HeaderRight>
     </HeaderWrapper>
